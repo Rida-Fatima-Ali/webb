@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+    body{
+        background:linear-gradient(to right,#fbc2eb,#a6c1ee);
+        font-family:'Poppins', sans-serif;
+        color:darkslategray;
+        margin:0;
+        padding:20px;
+    }
+
+    div{
+        background:linear-gradient(mistyrose,lavender);
+        border:2px solid red;
+        margin:auto;
+        height:200px;
+        width:100%;
+        font-size:64px;
+        border-radius:5px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    div p{
+        background:linear-gradient(90deg,#ff0080,#7928ca,#2afadf);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+        letter-spacing:2px;
+        font-weight:800;
+        text-decoration:underline 2px solid palevioletred;
+    }
+
+    section{
+        margin-top:50px;
+        font-family:'Montserrat', sans-serif;
+    }
+
+    ul{
+        font-size:20px;
+    }
+
+    li{
+        margin:10px 0;
+        cursor:pointer;
+        transition:color 0.3s;
+    }
+
+    li:hover{
+        color:#7928ca;
+    }
+
+    table{
+        margin-top:30px;
+        width:100%;
+        border-collapse:collapse;
+        font-size:18px;
+    }
+
+    th, td{
+        border:1px solid #444;
+        padding:12px;
+        text-align:center;
+    }
+
+    th{
+        background:#7928ca;
+        color:white;
+    }
+
+    tr:hover{
+        background:#fbc2eb;
+        transition:0.3s;
+    }
+
+    button{
+        margin-top:20px;
+        padding:10px 20px;
+        font-size:18px;
+        border:none;
+        border-radius:5px;
+        background:#7928ca;
+        color:white;
+        cursor:pointer;
+    }
+
+    button:hover{
+        background:#ff0080;
+    }
+</style>
+</head>
+
+<body>
+
+    <div>
+        <p>Welcome to my page</p>
+    </div>
+
+    <section data-aos="slide-up">
+        <h2>Ethical Hacking Topics</h2>
+        <ul>
+            <li onclick="alert('Passwords should be hashed')">Password Security</li>
+            <li onclick="alert('Phishing tricks users')">Phishing Awareness</li>
+            <li onclick="alert('Networks need protection')">Network Security</li>
+            <li onclick="alert('Websites have vulnerabilities')">Web Vulnerabilities</li>
+        </ul>
+    </section>
+
+    <section data-aos="slide-down">
+        <h2>Learning Roadmap</h2>
+
+        <table>
+            <tr>
+                <th>Level</th>
+                <th>Topic</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td>Beginner</td>
+                <td>Networking Basics</td>
+                <td>Understand internet</td>
+            </tr>
+            <tr>
+                <td>Intermediate</td>
+                <td>Web Security</td>
+                <td>Find vulnerabilities</td>
+            </tr>
+            <tr>
+                <td>Advanced</td>
+                <td>Ethical Testing</td>
+                <td>Secure systems</td>
+            </tr>
+        </table>
+
+        <button onclick="changeBg()">Change Background</button>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000 });
+
+        function changeBg(){
+            document.body.style.background =
+            "linear-gradient(to right,#a1c4fd,#c2e9fb)";
+        }
+
+    </script>
+
+</body>
+</html>
